@@ -1,0 +1,12 @@
+.sidebar {
+  grid-area: sidebar;
+  background-color: #6c2d2c;
+}
+.item {
+  text-decoration: none;
+  color: #f1dcc9;
+}
+.active {
+  color: aqua;
+  text-decoration: none;
+}
