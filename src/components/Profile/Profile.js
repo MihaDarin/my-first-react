@@ -1,7 +1,17 @@
 import React from "react";
 import style from "./Profile.module.css";
-const Profile = () => {
-  return <div className={style.content}>Profile</div>;
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
+import Posts from "./Posts/Posts";
+const Profile = (props) => {
+  return (
+    <div className={style.content}>
+      <ProfileInfo />
+      <Posts
+        state={props.state}
+        addPost={props.addPost}
+        updateNewPostText={props.updateNewPostText}
+      />
+    </div>
+  );
 };
-
 export default Profile;

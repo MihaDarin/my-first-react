@@ -4,13 +4,22 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import Profile from "./components/Profile/Profile";
 import Messages from "./components/Messages/Messages";
 import { Route, Routes } from "react-router-dom";
-function App() {
+function App(props) {
   return (
     <div className="app-wrapper">
       <Header />
       <Sidebar />
       <Routes>
-        <Route path="/profile" element={<Profile />} />
+        <Route
+          path="/profile"
+          element={
+            <Profile
+              state={props.state.profilePage}
+              addPost={props.addPost}
+              updateNewPostText={props.updateNewPostText}
+            />
+          }
+        />
         <Route path="/messages" element={<Messages />} />
         {/* <News />
       <Music />
