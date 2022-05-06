@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import style from "./Sidebar.module.css";
+
 const Sidebar = () => {
   const activeLink = () => {
     return (sideData) => (sideData.activeLink ? style.active : style.item);
@@ -13,8 +14,8 @@ const Sidebar = () => {
         </NavLink>
       </div>
       <div>
-        <NavLink to="/messages" className={activeLink()}>
-          Messages
+        <NavLink to="/chats" className={activeLink()}>
+          Chats
         </NavLink>
       </div>
       <div>

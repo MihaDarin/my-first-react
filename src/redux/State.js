@@ -2,7 +2,7 @@ let rerenderEntireTree = () => {
   // this function is just for "observer" in rerenderer function
 };
 let state = {
-  messagesPage: {
+  chatsPage: {
     usersData: [
       { id: 0, userName: "Stan" },
       { id: 1, userName: "Mango" },
@@ -45,14 +45,14 @@ export let updateNewPostText = (newText) => {
 export let sendMessage = () => {
   let newMessage = {
     id: 2,
-    messageText: state.messagesPage.newMessageText,
+    messageText: state.chatsPage.newMessageText,
   };
-  state.messagesPage.messagesData.push(newMessage);
-  state.messagesPage.newMessageText = "";
+  state.chatsPage.messagesData.push(newMessage);
+  state.chatsPage.newMessageText = "";
   rerenderEntireTree();
 };
 export let updateMessageText = (newText) => {
-  state.messagesPage.newMessageText = newText;
+  state.chatsPage.newMessageText = newText;
   rerenderEntireTree();
 };
 

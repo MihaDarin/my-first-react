@@ -2,8 +2,9 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Profile from "./components/Profile/Profile";
-import Messages from "./components/Messages/Messages";
+import Chats from "./components/Chats/Chats";
 import { Route, Routes } from "react-router-dom";
+
 function App(props) {
   return (
     <div className="app-wrapper">
@@ -20,7 +21,16 @@ function App(props) {
             />
           }
         />
-        <Route path="/messages" element={<Messages />} />
+        <Route
+          path="/chats"
+          element={
+            <Chats
+              state={props.state.chatsPage}
+              sendMessage={props.sendMessage}
+              updateMessageText={props.updateMessageText}
+            />
+          }
+        />
         {/* <News />
       <Music />
       <Settings />

@@ -1,8 +1,8 @@
-.messages {
+.chats {
   display: grid;
   grid-template-columns: 2fr 10fr;
 }
-.messages_items {
+.chats_items {
   display: flex;
   flex-direction: column;
 }
