@@ -15,19 +15,19 @@ function App(props) {
           path="/profile"
           element={
             <Profile
-              state={props.state.profilePage}
-              addPost={props.addPost}
-              updateNewPostText={props.updateNewPostText}
+              state={props.store.state.profilePage}
+              addPost={props.store.addPost}
+              updateNewPostText={props.store.updateNewPostText}
             />
           }
         />
         <Route
-          path="/chats"
+          path="/chats/*"
           element={
             <Chats
-              state={props.state.chatsPage}
-              sendMessage={props.sendMessage}
-              updateMessageText={props.updateMessageText}
+              state={props.store.state.chatsPage}
+              sendMessage={props.store.sendMessage}
+              updateMessageText={props.store.updateMessageText}
             />
           }
         />

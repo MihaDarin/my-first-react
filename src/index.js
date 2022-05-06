@@ -2,30 +2,18 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import state from "./redux/State";
 import { BrowserRouter } from "react-router-dom";
-import {
-  addPost,
-  updateNewPostText,
-  sendMessage,
-  updateMessageText,
-  rerenderer,
-} from "./redux/State";
+import store from "./redux/Store";
+import { rerenderer } from "./redux/Store";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const rerenderPage = () => {
   root.render(
     <BrowserRouter>
-      <App
-        state={state}
-        addPost={addPost}
-        updateNewPostText={updateNewPostText}
-        sendMessage={sendMessage}
-        updateMessageText={updateMessageText}
-      />
+      <App store={store} />
     </BrowserRouter>
   );
 };
 
-rerenderPage(state);
+rerenderPage(store);
 
 rerenderer(rerenderPage);
