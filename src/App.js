@@ -15,9 +15,11 @@ function App(props) {
           path="/profile"
           element={
             <Profile
-              state={props.store.state.profilePage}
-              addPost={props.store.addPost}
-              updateNewPostText={props.store.updateNewPostText}
+              state={props.store.getState().profilePage}
+              addPost={props.store.addPost.bind(props.store)}
+              updateNewPostText={props.store.updateNewPostText.bind(
+                props.store
+              )}
             />
           }
         />
@@ -25,9 +27,11 @@ function App(props) {
           path="/chats/*"
           element={
             <Chats
-              state={props.store.state.chatsPage}
-              sendMessage={props.store.sendMessage}
-              updateMessageText={props.store.updateMessageText}
+              state={props.store.getState().chatsPage}
+              sendMessage={props.store.sendMessage.bind(props.store)}
+              updateMessageText={props.store.updateMessageText.bind(
+                props.store
+              )}
             />
           }
         />

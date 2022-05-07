@@ -1,8 +1,5 @@
-let rerenderEntireTree = () => {
-  // this function is just for "observer" in rerenderer function
-};
 let store = {
-  state: {
+  _state: {
     chatsPage: {
       usersData: [
         { id: 0, userName: "Stan" },
@@ -22,42 +19,47 @@ let store = {
       newPostText: "",
     },
 
-    friendsData: [
-      { id: 0, name: "Avocado" },
-      { id: 1, name: "Lisa" },
-      { id: 2, name: "Gaspar" },
-    ],
+    // friendsData: [
+    //   { id: 0, name: "Avocado" },
+    //   { id: 1, name: "Lisa" },
+    //   { id: 2, name: "Gaspar" },
+    // ],
+  },
+  getState() {
+    return this._state;
+  },
+  _rerenderEntireTree() {
+    // this function is just for "observer" in rerenderer function
   },
   addPost() {
     let newPost = {
       id: 2,
-      text: store.state.profilePage.newPostText,
+      text: this._state.profilePage.newPostText,
     };
-    store.state.profilePage.postsData.push(newPost);
-    store.state.profilePage.newPostText = "";
-    rerenderEntireTree();
+    this._state.profilePage.postsData.push(newPost);
+    this._state.profilePage.newPostText = "";
+    this._rerenderEntireTree(this._state);
   },
   updateNewPostText(newText) {
-    store.state.profilePage.newPostText = newText;
-    rerenderEntireTree();
+    this._state.profilePage.newPostText = newText;
+    this._rerenderEntireTree(this._state);
   },
   sendMessage() {
     let newMessage = {
       id: 2,
-      messageText: store.state.chatsPage.newMessageText,
+      messageText: this._state.chatsPage.newMessageText,
     };
-    store.state.chatsPage.messagesData.push(newMessage);
-    store.state.chatsPage.newMessageText = "";
-    rerenderEntireTree();
+    this._state.chatsPage.messagesData.push(newMessage);
+    this._state.chatsPage.newMessageText = "";
+    this._rerenderEntireTree(this._state);
   },
   updateMessageText(newText) {
-    store.state.chatsPage.newMessageText = newText;
-    rerenderEntireTree();
+    this._state.chatsPage.newMessageText = newText;
+    this._rerenderEntireTree(this._state);
+  },
+  rerenderer(observer) {
+    this._rerenderEntireTree = observer;
   },
 };
 
 export default store;
-
-export const rerenderer = (observer) => {
-  rerenderEntireTree = observer;
-};

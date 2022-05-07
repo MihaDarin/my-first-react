@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import store from "./redux/Store";
-import { rerenderer } from "./redux/Store";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const rerenderPage = () => {
   root.render(
@@ -14,6 +14,6 @@ const rerenderPage = () => {
   );
 };
 
-rerenderPage(store);
+rerenderPage(store.getState());
 
-rerenderer(rerenderPage);
+store.rerenderer(rerenderPage);
