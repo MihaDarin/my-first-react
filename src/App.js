@@ -16,10 +16,7 @@ function App(props) {
           element={
             <Profile
               state={props.store.getState().profilePage}
-              addPost={props.store.addPost.bind(props.store)}
-              updateNewPostText={props.store.updateNewPostText.bind(
-                props.store
-              )}
+              dispatch={props.store.dispatch.bind(props.store)}
             />
           }
         />
@@ -28,10 +25,7 @@ function App(props) {
           element={
             <Chats
               state={props.store.getState().chatsPage}
-              sendMessage={props.store.sendMessage.bind(props.store)}
-              updateMessageText={props.store.updateMessageText.bind(
-                props.store
-              )}
+              dispatch={props.store.dispatch.bind(props.store)}
             />
           }
         />

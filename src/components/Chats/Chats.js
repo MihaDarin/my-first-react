@@ -14,12 +14,12 @@ const Chats = (props) => {
   let newMessage = React.createRef();
 
   const sendMessage = () => {
-    props.sendMessage();
+    props.dispatch({ type: "SEND-MESSAGE" });
   };
 
   const updateMessageText = () => {
     let text = newMessage.current.value;
-    props.updateMessageText(text);
+    props.dispatch({ type: "UPDATE-MESSAGE-TEXT", newText: text });
   };
   return (
     <div className={style.chats}>
