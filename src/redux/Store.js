@@ -1,7 +1,6 @@
-const ADD_POST = "ADD-POST";
-const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
-const SEND_MESSAGE = "SEND-MESSAGE";
-const UPDATE_MESSAGE_TEXT = "UPDATE-MESSAGE-TEXT";
+import chatsReducer from "./ChatsReducer";
+import profileReducer from "./ProfileReducer";
+
 let store = {
   _state: {
     chatsPage: {
@@ -40,42 +39,10 @@ let store = {
     this._rerenderEntireTree = observer;
   },
   dispatch(action) {
-    if (action.type === "ADD-POST") {
-      let newPost = {
-        id: 2,
-        text: this._state.profilePage.newPostText,
-      };
-      this._state.profilePage.postsData.push(newPost);
-      this._state.profilePage.newPostText = "";
-      this._rerenderEntireTree(this._state);
-    } else if (action.type === "UPDATE-NEW-POST-TEXT") {
-      this._state.profilePage.newPostText = action.newText;
-      this._rerenderEntireTree(this._state);
-    } else if (action.type === "SEND-MESSAGE") {
-      let newMessage = {
-        id: 2,
-        messageText: this._state.chatsPage.newMessageText,
-      };
-      this._state.chatsPage.messagesData.push(newMessage);
-      this._state.chatsPage.newMessageText = "";
-      this._rerenderEntireTree(this._state);
-    } else if (action.type === "UPDATE-MESSAGE-TEXT") {
-      this._state.chatsPage.newMessageText = action.newText;
-      this._rerenderEntireTree(this._state);
-    }
+    this._state.profilePage = profileReducer(this._state.profilePage, action);
+    this._state.chatsPage = chatsReducer(this._state.chatsPage, action);
+    this._rerenderEntireTree(this._state);
   },
 };
-export const addPostActionCreator = () => {
-  return { type: ADD_POST };
-};
-export const changePostTextActionCreator = (text) => {
-  return { type: UPDATE_NEW_POST_TEXT, newText: text };
-};
 
-export const sendMessageActionCreator = () => {
-  return { type: SEND_MESSAGE };
-};
-export const updateMessageTextActionCreator = (text) => {
-  return { type: UPDATE_MESSAGE_TEXT, newText: text };
-};
 export default store;

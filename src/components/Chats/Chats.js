@@ -5,8 +5,7 @@ import Message from "./Message/Message";
 import {
   sendMessageActionCreator,
   updateMessageTextActionCreator,
-} from "../../redux/Store";
-
+} from "../../redux/ChatsReducer";
 const Chats = (props) => {
   const chats = props.state.usersData.map((chat) => {
     return <Chat id={chat.id} name={chat.userName} />;
@@ -15,14 +14,12 @@ const Chats = (props) => {
     return <Message id={message.id} messageText={message.messageText} />;
   });
 
-  let newMessage = React.createRef();
-
   const sendMessage = () => {
     props.dispatch(sendMessageActionCreator());
   };
 
-  const updateMessageText = () => {
-    let text = newMessage.current.value;
+  const updateMessageText = (e) => {
+    let text = e.target.value;
     props.dispatch(updateMessageTextActionCreator(text));
   };
   return (
@@ -34,7 +31,6 @@ const Chats = (props) => {
       <div className={style.chats_items}>
         <textarea
           placeholder="Message Text"
-          ref={newMessage}
           onChange={updateMessageText}
           value={props.state.newMessageText}
         />
