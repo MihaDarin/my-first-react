@@ -1,3 +1,7 @@
+const ADD_POST = "ADD-POST";
+const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
+const SEND_MESSAGE = "SEND-MESSAGE";
+const UPDATE_MESSAGE_TEXT = "UPDATE-MESSAGE-TEXT";
 let store = {
   _state: {
     chatsPage: {
@@ -61,5 +65,17 @@ let store = {
     }
   },
 };
+export const addPostActionCreator = () => {
+  return { type: ADD_POST };
+};
+export const changePostTextActionCreator = (text) => {
+  return { type: UPDATE_NEW_POST_TEXT, newText: text };
+};
 
+export const sendMessageActionCreator = () => {
+  return { type: SEND_MESSAGE };
+};
+export const updateMessageTextActionCreator = (text) => {
+  return { type: UPDATE_MESSAGE_TEXT, newText: text };
+};
 export default store;
