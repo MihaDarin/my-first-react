@@ -28,20 +28,20 @@ let store = {
     //   { id: 2, name: "Gaspar" },
     // ],
   },
-  _rerenderEntireTree() {
+  _callSubscriber() {
     // this function is just for "observer" in rerenderer function
   },
   getState() {
     return this._state;
   },
 
-  rerenderer(observer) {
-    this._rerenderEntireTree = observer;
+  subscribe(observer) {
+    this._callSubscriber = observer;
   },
   dispatch(action) {
     this._state.profilePage = profileReducer(this._state.profilePage, action);
     this._state.chatsPage = chatsReducer(this._state.chatsPage, action);
-    this._rerenderEntireTree(this._state);
+    this._callSubscriber(this._state);
   },
 };
 

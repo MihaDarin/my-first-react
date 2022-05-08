@@ -7,11 +7,17 @@ import {
   updateMessageTextActionCreator,
 } from "../../redux/ChatsReducer";
 const Chats = (props) => {
-  const chats = props.state.usersData.map((chat) => {
-    return <Chat id={chat.id} name={chat.userName} />;
+  const chats = props.state.chatsPage.usersData.map((chat) => {
+    return <Chat id={chat.id} name={chat.userName} key={chat.id} />;
   });
-  const messages = props.state.messagesData.map((message) => {
-    return <Message id={message.id} messageText={message.messageText} />;
+  const messages = props.state.chatsPage.messagesData.map((message) => {
+    return (
+      <Message
+        id={message.id}
+        messageText={message.messageText}
+        key={message.id}
+      />
+    );
   });
 
   const sendMessage = () => {

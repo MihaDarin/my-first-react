@@ -5,9 +5,10 @@ import {
   addPostActionCreator,
   changePostTextActionCreator,
 } from "../../../redux/ProfileReducer";
+
 const Posts = (props) => {
-  const posts = props.state.postsData.map((post) => {
-    return <Post id={post.id} text={post.text} />;
+  const posts = props.state.profilePage.postsData.map((post) => {
+    return <Post id={post.id} text={post.text} key={post.id} />;
   });
 
   const addPost = () => {
