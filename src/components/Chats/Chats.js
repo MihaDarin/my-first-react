@@ -2,10 +2,7 @@ import React from "react";
 import style from "./Chats.module.css";
 import Chat from "./Chat/Chat";
 import Message from "./Message/Message";
-import {
-  sendMessageActionCreator,
-  updateMessageTextActionCreator,
-} from "../../redux/ChatsReducer";
+
 const Chats = (props) => {
   const chats = props.state.chatsPage.usersData.map((chat) => {
     return <Chat id={chat.id} name={chat.userName} key={chat.id} />;
@@ -21,12 +18,12 @@ const Chats = (props) => {
   });
 
   const sendMessage = () => {
-    props.dispatch(sendMessageActionCreator());
+    props.sendMessage();
   };
 
   const updateMessageText = (e) => {
     let text = e.target.value;
-    props.dispatch(updateMessageTextActionCreator(text));
+    props.updateMessageText(text);
   };
   return (
     <div className={style.chats}>

@@ -2,7 +2,7 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Profile from "./components/Profile/Profile";
-import Chats from "./components/Chats/Chats";
+import ChatsContainer from "./components/Chats/ChatsContainer";
 import { Route, Routes } from "react-router-dom";
 
 function App(props) {
@@ -11,23 +11,10 @@ function App(props) {
       <Header />
       <Sidebar />
       <Routes>
-        <Route
-          path="/profile"
-          element={
-            <Profile
-              state={props.store.getState().profilePage}
-              dispatch={props.store.dispatch.bind(props.store)}
-            />
-          }
-        />
+        <Route path="/profile" element={<Profile store={props.store} />} />
         <Route
           path="/chats/*"
-          element={
-            <Chats
-              state={props.store.getState().chatsPage}
-              dispatch={props.store.dispatch.bind(props.store)}
-            />
-          }
+          element={<ChatsContainer store={props.store} />}
         />
         {/* <News />
       <Music />
