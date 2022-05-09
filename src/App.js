@@ -11,11 +11,8 @@ function App(props) {
       <Header />
       <Sidebar />
       <Routes>
-        <Route path="/profile" element={<Profile store={props.store} />} />
-        <Route
-          path="/chats/*"
-          element={<ChatsContainer store={props.store} />}
-        />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/chats/*" element={<ChatsContainer />} />
         {/* <News />
       <Music />
       <Settings />
