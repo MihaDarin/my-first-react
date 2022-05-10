@@ -4,7 +4,7 @@ import Chat from "./Chat/Chat";
 import Message from "./Message/Message";
 
 const Chats = (props) => {
-  const chats = props.state.usersData.map((chat) => {
+  const chats = props.state.chatsData.map((chat) => {
     return <Chat id={chat.id} name={chat.userName} key={chat.id} />;
   });
   const messages = props.state.messagesData.map((message) => {

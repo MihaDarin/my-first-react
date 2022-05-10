@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom";
 import style from "./Sidebar.module.css";
 
 const Sidebar = () => {
-  const activeLink = () => {
-    return (sideData) => (sideData.activeLink ? style.active : style.item);
+  let activeLink = () => {
+    return (sideData) => (sideData.isActive ? style.active : style.item);
   };
   return (
     <div className={style.sidebar}>
@@ -19,6 +19,11 @@ const Sidebar = () => {
         </NavLink>
       </div>
       <div>
+        <NavLink to="/users" className={activeLink()}>
+          Users
+        </NavLink>
+      </div>
+      {/* <div>
         <NavLink to="/news" className={activeLink()}>
           News
         </NavLink>
@@ -37,7 +42,7 @@ const Sidebar = () => {
         <NavLink to="/friends" className={activeLink()}>
           Friends
         </NavLink>
-      </div>
+      </div> */}
     </div>
   );
 };

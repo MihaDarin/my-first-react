@@ -2,7 +2,7 @@ const SEND_MESSAGE = "SEND-MESSAGE";
 const UPDATE_MESSAGE_TEXT = "UPDATE-MESSAGE-TEXT";
 
 let initialState = {
-  usersData: [
+  chatsData: [
     { id: 0, userName: "Stan" },
     { id: 1, userName: "Mango" },
   ],
