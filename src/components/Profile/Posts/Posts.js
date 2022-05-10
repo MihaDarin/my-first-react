@@ -3,7 +3,7 @@ import Post from "./Post/Post";
 import style from "./Posts.module.css";
 
 const Posts = (props) => {
-  const posts = props.posts.profilePage.postsData.map((post) => {
+  const posts = props.posts.postsData.map((post) => {
     return <Post id={post.id} text={post.text} key={post.id} />;
   });
 

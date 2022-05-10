@@ -4,10 +4,10 @@ import Chat from "./Chat/Chat";
 import Message from "./Message/Message";
 
 const Chats = (props) => {
-  const chats = props.state.chatsPage.usersData.map((chat) => {
+  const chats = props.state.usersData.map((chat) => {
     return <Chat id={chat.id} name={chat.userName} key={chat.id} />;
   });
-  const messages = props.state.chatsPage.messagesData.map((message) => {
+  const messages = props.state.messagesData.map((message) => {
     return (
       <Message
         id={message.id}
