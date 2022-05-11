@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Legolas",
+      "avatar": "some picture",
+      "status": "some status",
+      "location": {
+        "country": "some country",
+        "city": "some city"
+      },
+      "follow": true
+    },
+    {
+      "id": 2,
+      "name": "Aragorn",
+      "avatar": "some picture",
+      "status": "some status",
+      "location": {
+        "country": "some country",
+        "city": "some city"
+      },
+      "follow": false
+    },
+    {
+      "id": 3,
+      "name": "Gimli",
+      "avatar": "some picture",
+      "status": "some status",
+      "location": {
+        "country": "some country",
+        "city": "some city"
+      },
+      "follow": false
+    },
+    {
+      "id": 4,
+      "name": "Gendlaf",
+      "avatar": "some picture",
+      "status": "some status",
+      "location": {
+        "country": "some country",
+        "city": "some city"
+      },
+      "follow": true
+    }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "name": "item 1"
+    }
+  ]
+}
