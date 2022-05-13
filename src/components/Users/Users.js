@@ -3,15 +3,13 @@ import axios from "axios";
 // import User from "./User/User";
 
 class Users extends React.Component {
-  constructor(props) {
-    super(props);
+  componentDidMount() {
     if (this.props.usersData.length === 0) {
       axios.get("http://localhost:3001/users").then((response) => {
         this.props.setUsers(response.data);
       });
     }
   }
-
   render() {
     return (
       <div>

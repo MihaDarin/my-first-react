@@ -23,12 +23,12 @@ const Sidebar = () => {
           Users
         </NavLink>
       </div>
-      {/* <div>
+      <div>
         <NavLink to="/news" className={activeLink()}>
           News
         </NavLink>
       </div>
-      <div>
+      {/* <div>
         <NavLink to="/music" className={activeLink()}>
           Music
         </NavLink>
