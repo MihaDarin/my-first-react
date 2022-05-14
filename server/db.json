@@ -43,12 +43,182 @@
         "city": "some city"
       },
       "follow": true
-    }
-  ],
-  "items": [
+    },
     {
-      "id": 1,
-      "name": "item 1"
+      "id": 5,
+      "name": "Kabachok",
+      "avatar": "some picture",
+      "status": "some status",
+      "location": {
+        "country": "some country",
+        "city": "some city"
+      },
+      "follow": true
+    },
+    {
+      "id": 6,
+      "name": "Piter",
+      "avatar": "some picture",
+      "status": "some status",
+      "location": {
+        "country": "some country",
+        "city": "some city"
+      },
+      "follow": true
+    },
+    {
+      "id": 7,
+      "name": "Pipin",
+      "avatar": "some picture",
+      "status": "some status",
+      "location": {
+        "country": "some country",
+        "city": "some city"
+      },
+      "follow": true
+    },
+    {
+      "id": 8,
+      "name": "Kenobi",
+      "avatar": "some picture",
+      "status": "some status",
+      "location": {
+        "country": "some country",
+        "city": "some city"
+      },
+      "follow": true
+    },
+    {
+      "id": 9,
+      "name": "Monti",
+      "avatar": "some picture",
+      "status": "some status",
+      "location": {
+        "country": "some country",
+        "city": "some city"
+      },
+      "follow": true
+    },
+    {
+      "id": 10,
+      "name": "Loki",
+      "avatar": "some picture",
+      "status": "some status",
+      "location": {
+        "country": "some country",
+        "city": "some city"
+      },
+      "follow": true
+    },
+    {
+      "id": 11,
+      "name": "Tiger",
+      "avatar": "some picture",
+      "status": "some status",
+      "location": {
+        "country": "some country",
+        "city": "some city"
+      },
+      "follow": true
+    },
+    {
+      "id": 12,
+      "name": "Randal",
+      "avatar": "some picture",
+      "status": "some status",
+      "location": {
+        "country": "some country",
+        "city": "some city"
+      },
+      "follow": true
+    },
+    {
+      "id": 13,
+      "name": "Martin",
+      "avatar": "some picture",
+      "status": "some status",
+      "location": {
+        "country": "some country",
+        "city": "some city"
+      },
+      "follow": true
+    },
+    {
+      "id": 14,
+      "name": "Mark",
+      "avatar": "some picture",
+      "status": "some status",
+      "location": {
+        "country": "some country",
+        "city": "some city"
+      },
+      "follow": true
+    },
+    {
+      "id": 15,
+      "name": "Avreli",
+      "avatar": "some picture",
+      "status": "some status",
+      "location": {
+        "country": "some country",
+        "city": "some city"
+      },
+      "follow": true
+    },
+    {
+      "id": 16,
+      "name": "Jackie",
+      "avatar": "some picture",
+      "status": "some status",
+      "location": {
+        "country": "some country",
+        "city": "some city"
+      },
+      "follow": true
+    },
+    {
+      "id": 17,
+      "name": "Zidan",
+      "avatar": "some picture",
+      "status": "some status",
+      "location": {
+        "country": "some country",
+        "city": "some city"
+      },
+      "follow": true
+    },
+    {
+      "id": 18,
+      "name": "Jordan",
+      "avatar": "some picture",
+      "status": "some status",
+      "location": {
+        "country": "some country",
+        "city": "some city"
+      },
+      "follow": true
+    },
+    {
+      "id": 19,
+      "name": "Eminem",
+      "avatar": "some picture",
+      "status": "some status",
+      "location": {
+        "country": "some country",
+        "city": "some city"
+      },
+      "follow": true
+    },
+    {
+      "id": 20,
+      "name": "Roy",
+      "avatar": "some picture",
+      "status": "some status",
+      "location": {
+        "country": "some country",
+        "city": "some city"
+      },
+      "follow": true
     }
   ]
 }

@@ -1,49 +1,61 @@
 import React from "react";
-import axios from "axios";
-// import User from "./User/User";
+import style from "./Users.module.css";
+const Users = (props) => {
+  let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
 
-class Users extends React.Component {
-  componentDidMount() {
-    if (this.props.usersData.length === 0) {
-      axios.get("http://localhost:3001/users").then((response) => {
-        this.props.setUsers(response.data);
-      });
-    }
+  let pages = [];
+  for (let i = 1; i <= pagesCount; i++) {
+    pages.push(i);
   }
-  render() {
-    return (
+
+  return (
+    <div>
       <div>
-        {this.props.usersData.map((user) => (
-          <div key={user.id}>
-            <div>{user.avatar}</div>
-            <div>{user.name}</div>
-            <div>{user.status}</div>
-            <div>
-              {user.follow ? (
-                <button
-                  onClick={() => {
-                    this.props.follow(user.id);
-                  }}
-                >
-                  {" "}
-                  UNFOLLOW{" "}
-                </button>
-              ) : (
-                <button
-                  onClick={() => {
-                    this.props.unfollow(user.id);
-                  }}
-                >
-                  {" "}
-                  FOLLOW{" "}
-                </button>
-              )}
-            </div>
-          </div>
-        ))}
+        {pages.map((page) => {
+          return (
+            <span
+              className={props.currentPage === page && style.active}
+              onClick={(e) => {
+                props.changePage(page);
+              }}
+              key={page}
+            >
+              {page}
+            </span>
+          );
+        })}
       </div>
-    );
-  }
-}
+
+      {props.usersData.map((user) => (
+        <div key={user.id}>
+          <div>{user.avatar}</div>
+          <div>{user.name}</div>
+          <div>{user.status}</div>
+          <div>
+            {user.follow ? (
+              <button
+                onClick={() => {
+                  props.follow(user.id);
+                }}
+              >
+                {" "}
+                UNFOLLOW{" "}
+              </button>
+            ) : (
+              <button
+                onClick={() => {
+                  props.unfollow(user.id);
+                }}
+              >
+                {" "}
+                FOLLOW{" "}
+              </button>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
 
 export default Users;
