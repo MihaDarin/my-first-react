@@ -1,6 +1,16 @@
 import React from "react";
-
-const ProfileInfo = () => {
-  return <div>avatar + description</div>;
+import Preloader from "../../Perloader/Preloader";
+import avatar from "../../../assets/images/user.png";
+const ProfileInfo = (props) => {
+  if (!props.profile) {
+    return <Preloader />;
+  }
+  return (
+    <div>
+      <div>{props.profile.name}</div>
+      <img src={avatar} />
+      <div>{props.profile.status}</div>
+    </div>
+  );
 };
 export default ProfileInfo;

@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Legolas",
-      "avatar": "some picture",
+      "avatar": null,
       "status": "some status",
       "location": {
         "country": "some country",
@@ -14,7 +14,7 @@
     {
       "id": 2,
       "name": "Aragorn",
-      "avatar": "some picture",
+      "avatar": null,
       "status": "some status",
       "location": {
         "country": "some country",
@@ -25,7 +25,7 @@
     {
       "id": 3,
       "name": "Gimli",
-      "avatar": "some picture",
+      "avatar": null,
       "status": "some status",
       "location": {
         "country": "some country",
@@ -36,7 +36,7 @@
     {
       "id": 4,
       "name": "Gendlaf",
-      "avatar": "some picture",
+      "avatar": null,
       "status": "some status",
       "location": {
         "country": "some country",
@@ -47,7 +47,7 @@
     {
       "id": 5,
       "name": "Kabachok",
-      "avatar": "some picture",
+      "avatar": null,
       "status": "some status",
       "location": {
         "country": "some country",
@@ -58,7 +58,7 @@
     {
       "id": 6,
       "name": "Piter",
-      "avatar": "some picture",
+      "avatar": null,
       "status": "some status",
       "location": {
         "country": "some country",
@@ -69,7 +69,7 @@
     {
       "id": 7,
       "name": "Pipin",
-      "avatar": "some picture",
+      "avatar": null,
       "status": "some status",
       "location": {
         "country": "some country",
@@ -80,7 +80,7 @@
     {
       "id": 8,
       "name": "Kenobi",
-      "avatar": "some picture",
+      "avatar": null,
       "status": "some status",
       "location": {
         "country": "some country",
@@ -91,7 +91,7 @@
     {
       "id": 9,
       "name": "Monti",
-      "avatar": "some picture",
+      "avatar": null,
       "status": "some status",
       "location": {
         "country": "some country",
@@ -102,7 +102,7 @@
     {
       "id": 10,
       "name": "Loki",
-      "avatar": "some picture",
+      "avatar": null,
       "status": "some status",
       "location": {
         "country": "some country",
@@ -113,7 +113,7 @@
     {
       "id": 11,
       "name": "Tiger",
-      "avatar": "some picture",
+      "avatar": null,
       "status": "some status",
       "location": {
         "country": "some country",
@@ -124,7 +124,7 @@
     {
       "id": 12,
       "name": "Randal",
-      "avatar": "some picture",
+      "avatar": null,
       "status": "some status",
       "location": {
         "country": "some country",
@@ -135,7 +135,7 @@
     {
       "id": 13,
       "name": "Martin",
-      "avatar": "some picture",
+      "avatar": null,
       "status": "some status",
       "location": {
         "country": "some country",
@@ -146,7 +146,7 @@
     {
       "id": 14,
       "name": "Mark",
-      "avatar": "some picture",
+      "avatar": null,
       "status": "some status",
       "location": {
         "country": "some country",
@@ -157,7 +157,7 @@
     {
       "id": 15,
       "name": "Avreli",
-      "avatar": "some picture",
+      "avatar": null,
       "status": "some status",
       "location": {
         "country": "some country",
@@ -168,7 +168,7 @@
     {
       "id": 16,
       "name": "Jackie",
-      "avatar": "some picture",
+      "avatar": null,
       "status": "some status",
       "location": {
         "country": "some country",
@@ -179,7 +179,7 @@
     {
       "id": 17,
       "name": "Zidan",
-      "avatar": "some picture",
+      "avatar": null,
       "status": "some status",
       "location": {
         "country": "some country",
@@ -190,7 +190,7 @@
     {
       "id": 18,
       "name": "Jordan",
-      "avatar": "some picture",
+      "avatar": null,
       "status": "some status",
       "location": {
         "country": "some country",
@@ -201,7 +201,7 @@
     {
       "id": 19,
       "name": "Eminem",
-      "avatar": "some picture",
+      "avatar": null,
       "status": "some status",
       "location": {
         "country": "some country",
@@ -212,7 +212,7 @@
     {
       "id": 20,
       "name": "Roy",
-      "avatar": "some picture",
+      "avatar": null,
       "status": "some status",
       "location": {
         "country": "some country",
