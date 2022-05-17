@@ -13,7 +13,8 @@ function App(props) {
       <Header />
       <Sidebar />
       <Routes>
-        <Route path="/profile/*" element={<ProfileContainer />} />
+        <Route path="/profile/:userId?" element={<ProfileContainer />} />
+        <Route path="/profile/*" element={<ProfileContainer />} />/
         <Route path="/chats/*" element={<ChatsContainer />} />
         <Route path="/users/" element={<UsersContainer />} />
         <Route path="/news" element={<NewsContainer />} />

@@ -8,7 +8,7 @@ const ProfileInfo = (props) => {
   return (
     <div>
       <div>{props.profile.name}</div>
-      <img src={avatar} />
+      <img src={avatar} alt="avatar" />
       <div>{props.profile.status}</div>
     </div>
   );
