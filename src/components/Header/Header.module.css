@@ -2,3 +2,10 @@
   grid-area: header;
   background-color: #42313a;
 }
+.login_block {
+  float: right;
+}
+.login_block a {
+  color: #f1dcc9;
+  text-decoration: none;
+}
