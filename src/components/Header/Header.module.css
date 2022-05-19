@@ -4,6 +4,7 @@
 }
 .login_block {
   float: right;
+  margin: 10px;
 }
 .login_block a {
   color: #f1dcc9;
