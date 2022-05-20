@@ -10,31 +10,23 @@ import {
 import Preloader from "../Perloader/Preloader";
 import Users from "./Users";
 import axios from "axios";
-
+import { getUsers } from "../../api/Api";
 class UsersContainer extends React.Component {
   componentDidMount() {
     this.props.setIsFetching(true);
-    axios
-      .get(
-        `http://localhost:3001/users?_page=${this.props.currentPage}&_limit=${this.props.pageSize}`
-      )
-      .then((response) => {
-        this.props.setIsFetching(false);
-        this.props.setUsers(response.data);
-      });
+    getUsers(this.props.currentPage, this.props.pageSize).then((data) => {
+      this.props.setIsFetching(false);
+      this.props.setUsers(data);
+    });
   }
 
   changePage = (pageNumber) => {
     this.props.setCurrentPage(pageNumber);
     this.props.setIsFetching(true);
-    axios
-      .get(
-        `http://localhost:3001/users?_page=${pageNumber}&_limit=${this.props.pageSize}`
-      )
-      .then((response) => {
-        this.props.setIsFetching(false);
-        this.props.setUsers(response.data);
-      });
+    getUsers(pageNumber, this.props.pageSize).then((data) => {
+      this.props.setIsFetching(false);
+      this.props.setUsers(data);
+    });
   };
   render() {
     return (
