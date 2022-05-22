@@ -1,8 +1,10 @@
+import { UsersAPI } from "../api/Api";
 const FOLLOW = "FOLLOW";
 const UNFOLLOW = "UNFOLLOW";
 const SET_USERS = "SET-USERS";
 const SET_CURRENT_PAGE = "SET-CURRENT-PAGE";
 const IS_FETCHING = "IS-FETCHNG";
+
 let initialState = {
   usersData: [],
   pageSize: 5,
@@ -52,10 +54,10 @@ const UsersReducer = (state = initialState, action) => {
   }
 };
 
-export const follow = (userId) => {
+export const followSucsess = (userId) => {
   return { type: FOLLOW, userId };
 };
-export const unfollow = (userId) => {
+export const unfollowSucsess = (userId) => {
   return { type: UNFOLLOW, userId };
 };
 
@@ -69,3 +71,27 @@ export const setIsFetching = (isFetching) => {
   return { type: IS_FETCHING, isFetching };
 };
 export default UsersReducer;
+
+export const getUsersThunkCreator = (currentPage, pageSize) => {
+  return (dispatch) => {
+    dispatch(setIsFetching(true));
+    UsersAPI.getUsers(currentPage, pageSize).then((data) => {
+      dispatch(setIsFetching(false));
+      dispatch(setUsers(data));
+    });
+  };
+};
+export const unfollow = (userId) => {
+  return (dispatch) => {
+    UsersAPI.unfollow(userId).then((response) => {
+      dispatch(unfollowSucsess(response.data.id));
+    });
+  };
+};
+export const follow = (userId) => {
+  return (dispatch) => {
+    UsersAPI.follow(userId).then((response) => {
+      dispatch(followSucsess(response.data.id));
+    });
+  };
+};

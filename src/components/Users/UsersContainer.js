@@ -2,31 +2,19 @@ import React from "react";
 import { connect } from "react-redux";
 import {
   follow,
-  setUsers,
   unfollow,
   setCurrentPage,
-  setIsFetching,
+  getUsersThunkCreator,
 } from "../../redux/UsersReducer";
 import Preloader from "../Perloader/Preloader";
 import Users from "./Users";
-import axios from "axios";
-import { getUsers } from "../../api/Api";
 class UsersContainer extends React.Component {
   componentDidMount() {
-    this.props.setIsFetching(true);
-    getUsers(this.props.currentPage, this.props.pageSize).then((data) => {
-      this.props.setIsFetching(false);
-      this.props.setUsers(data);
-    });
+    this.props.getUsers(this.props.currentPage, this.props.pageSize);
   }
 
   changePage = (pageNumber) => {
-    this.props.setCurrentPage(pageNumber);
-    this.props.setIsFetching(true);
-    getUsers(pageNumber, this.props.pageSize).then((data) => {
-      this.props.setIsFetching(false);
-      this.props.setUsers(data);
-    });
+    this.props.getUsers(pageNumber, this.props.pageSize);
   };
   render() {
     return (
@@ -56,30 +44,9 @@ const mapStateToProps = (state) => {
   };
 };
 
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     follow: (userId) => {
-//       dispatch(followAC(userId));
-//     },
-//     unfollow: (userId) => {
-//       dispatch(unfollowAC(userId));
-//     },
-//     setUsers: (usersData) => {
-//       dispatch(setUsersAC(usersData));
-//     },
-//     setCurrentPage: (pageNumber) => {
-//       dispatch(setCurrentPageAC(pageNumber));
-//     },
-//     toggleIsFetching: (isFetching) => {
-//       dispatch(setIsFetchingAC(isFetching));
-//     },
-//   };
-// };
-
 export default connect(mapStateToProps, {
   follow,
   unfollow,
-  setUsers,
   setCurrentPage,
-  setIsFetching,
+  getUsers: getUsersThunkCreator,
 })(UsersContainer);
