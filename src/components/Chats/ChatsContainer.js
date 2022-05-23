@@ -9,6 +9,7 @@ import Chats from "./Chats";
 const mapStateToProps = (state) => {
   return {
     state: state.chatsPage,
+    isAuth: state.auth.isAuth,
   };
 };
 const mapDispatchToProps = (dispatch) => {

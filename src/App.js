@@ -6,6 +6,7 @@ import UsersContainer from "./components/Users/UsersContainer";
 import NewsContainer from "./components/News/NewsContainer";
 import { Route, Routes } from "react-router-dom";
 import HeaderContainer from "./components/Header/HeaderContainer";
+import Login from "./components/Login/Login";
 
 function App(props) {
   return (
@@ -13,6 +14,7 @@ function App(props) {
       <HeaderContainer />
       <Sidebar />
       <Routes>
+        <Route path="/login" element={<Login />} />
         <Route path="/profile/:userId" element={<ProfileContainer />} />
         <Route path="/profile/*" element={<ProfileContainer />} />/
         <Route path="/chats/*" element={<ChatsContainer />} />

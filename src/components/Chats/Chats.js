@@ -2,6 +2,7 @@ import React from "react";
 import style from "./Chats.module.css";
 import Chat from "./Chat/Chat";
 import Message from "./Message/Message";
+import { Navigate } from "react-router-dom";
 
 const Chats = (props) => {
   const chats = props.state.chatsData.map((chat) => {
@@ -25,6 +26,8 @@ const Chats = (props) => {
     let text = e.target.value;
     props.updateMessageText(text);
   };
+
+  if (!props.isAuth) return <Navigate to={"/login"} />;
   return (
     <div className={style.chats}>
       <div className={style.chats_items}>{chats}</div>
