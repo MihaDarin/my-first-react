@@ -1,9 +1,11 @@
 // import React from "react";
 import { connect } from "react-redux";
+import { compose } from "redux";
 import {
   sendMessageActionCreator,
   updateMessageTextActionCreator,
 } from "../../redux/ChatsReducer";
+import WithAuthRedirect from "../hoc/WithAuthRedirect";
 import Chats from "./Chats";
 
 const mapStateToProps = (state) => {
@@ -22,5 +24,7 @@ const mapDispatchToProps = (dispatch) => {
     },
   };
 };
-const ChatsContainer = connect(mapStateToProps, mapDispatchToProps)(Chats);
-export default ChatsContainer;
+export default compose(
+  connect(mapStateToProps, mapDispatchToProps),
+  WithAuthRedirect
+)(Chats);
