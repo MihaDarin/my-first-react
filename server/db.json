@@ -225,7 +225,9 @@
     "me": {
       "id": 123,
       "email": "chto-to krutoe",
-      "login": "John"
+      "login": "John",
+      "name": "Jonathan",
+      "avatar": "user.png"
     }
   }
 }
