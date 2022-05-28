@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Legolas",
       "avatar": null,
-      "status": "some status",
+      "status": "I am elf",
       "location": {
         "country": "some country",
         "city": "some city"
@@ -15,7 +15,7 @@
       "id": 2,
       "name": "Aragorn",
       "avatar": null,
-      "status": "some status",
+      "status": "I am human",
       "location": {
         "country": "some country",
         "city": "some city"
@@ -26,7 +26,7 @@
       "id": 3,
       "name": "Gimli",
       "avatar": null,
-      "status": "some status",
+      "status": "I am borodach",
       "location": {
         "country": "some country",
         "city": "some city"
@@ -37,7 +37,7 @@
       "id": 4,
       "name": "Gendlaf",
       "avatar": null,
-      "status": "some status",
+      "status": "I am wizard",
       "location": {
         "country": "some country",
         "city": "some city"

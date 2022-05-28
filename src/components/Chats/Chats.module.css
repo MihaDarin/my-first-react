@@ -1,8 +1,0 @@
-.chats {
-  display: grid;
-  grid-template-columns: 2fr 10fr;
-}
-.chats_items {
-  display: flex;
-  flex-direction: column;
-}
