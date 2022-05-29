@@ -1,0 +1,12 @@
+.content_wrapper {
+  width: 100px;
+  background-color: rgb(40, 151, 36);
+}
+.links {
+  display: grid;
+}
+.link {
+  text-decoration: none;
+  padding: 5px;
+  font-size: 20px;
+}

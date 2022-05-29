@@ -1,0 +1,9 @@
+.app_wrapper {
+  width: 1200px;
+  height: 920px;
+}
+
+.content_wrapper {
+  display: flex;
+  height: 700px;
+}
